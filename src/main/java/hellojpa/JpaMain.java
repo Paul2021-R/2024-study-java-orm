@@ -16,15 +16,15 @@ public class JpaMain {
         // 트랜잭션의 시작
         tx.begin();
         try {
-            Member user = new Member();
+            MemberOld user = new MemberOld();
             user.setId(1L);
             user.setName("haryu");
 
-            Member user1 = new Member();
+            MemberOld user1 = new MemberOld();
             user1.setId(2L);
             user1.setName("2");
 
-            Member user2 = new Member();
+            MemberOld user2 = new MemberOld();
             user2.setId(3L);
             user2.setName("haryu");
 
@@ -41,14 +41,14 @@ public class JpaMain {
         }
         tx.begin();
 
-        Member findedMember = dbManager.find(Member.class, 1L);
-        System.out.println("객체 찾기 : "+ findedMember.getIdAndName());
+        MemberOld findedMemberOld = dbManager.find(MemberOld.class, 1L);
+        System.out.println("객체 찾기 : "+ findedMemberOld.getIdAndName());
 
-        List<Member> datas = dbManager.createQuery("select m from Member as m ", Member.class)
+        List<MemberOld> datas = dbManager.createQuery("select m from MemberOld as m ", MemberOld.class)
                 .getResultList();
 
-        for (Member member : datas) {
-            System.out.println(member.getIdAndName());
+        for (MemberOld memberOld : datas) {
+            System.out.println(memberOld.getIdAndName());
         }
 
 
