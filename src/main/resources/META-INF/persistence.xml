@@ -9,7 +9,7 @@
             <property name="jakarta.persistence.jdbc.user" value="sa"/>
             <property name="jakarta.persistence.jdbc.password" value=""/>
             <!-- 필요한 데이터베이스의 위치 값을 지정해주었다. -->
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/h2DataBase/test"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/h2DataBase/test2"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
